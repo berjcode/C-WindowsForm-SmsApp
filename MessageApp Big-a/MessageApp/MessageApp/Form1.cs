@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -86,6 +87,12 @@ namespace MessageApp
           this.FormBorderStyle = FormBorderStyle.Sizable; //Cerceveyi Oynatma
             this.Size = new Size(1600, 900);//Cerceve boyutu
             this.MaximumSize = new Size(1600, 900);
+            #endregion
+
+
+
+            #region ThemaAndButtonSettings
+           
             #endregion
         }
 
@@ -169,6 +176,7 @@ namespace MessageApp
                     int index = Numaralar.Items.IndexOf(cellValue);
                    if(checkBox != null)//Checkbox kolonundan  bir değer gelip gelmediğini kontrol ediyoruz.
                     {
+                        //İndex kontrolü yapar o değerin var olup olmadığını anlamak için .
                         if (index != -1)
                         {
 
@@ -282,7 +290,7 @@ namespace MessageApp
             }
             else if(selectValue == "Branş")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum,BransId from Uye  ", conn);
+                SqlCommand command = new SqlCommand("select Uye.Id,Uye.Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum,Brans.Ad  from Uye  inner join Brans on Uye.BransId = Brans.Id  ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -366,10 +374,51 @@ namespace MessageApp
            
         }
 
+       
+
+
+        #endregion
+        #region Login
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            SqlCommand command = new SqlCommand("select COUNT(*) from MessageAppLogin where UserName = @userName and Password = @password ",conn);
+
+            conn.Open();
+
+            command.Parameters.AddWithValue("@userName", textBox1.Text);
+            command.Parameters.AddWithValue("@password", textBox2.Text);
+            int result = (int)command.ExecuteScalar();   // tek bir değer beklediğimizi belirttik.
+         if(result>0)
+            {
+                if (panel4.Visible == false)
+                {
+
+                    panel4.Visible = true;
+                }
+                else
+                {
+
+                    panel4.Visible = false;
+                }
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("Kullanıcı adı veya şifre yanlış... ");
+            }
+
+            conn.Close();
+           
+        }
+
         #endregion
 
+
+      
+
+
         //Form 
-        
+
     }
 }
 

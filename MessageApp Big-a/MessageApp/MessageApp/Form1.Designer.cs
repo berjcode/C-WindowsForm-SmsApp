@@ -41,9 +41,9 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.AllAddButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.CloseButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.CheckboxData = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -52,12 +52,19 @@
             this.uyeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uspUyeHepsiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uyeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uspUyeHepsiBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // MessageBox
@@ -179,6 +186,17 @@
             this.panel1.Size = new System.Drawing.Size(317, 447);
             this.panel1.TabIndex = 14;
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.CloseButton.Location = new System.Drawing.Point(213, 0);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(92, 30);
+            this.CloseButton.TabIndex = 18;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -198,17 +216,6 @@
             this.label4.Size = new System.Drawing.Size(69, 25);
             this.label4.TabIndex = 17;
             this.label4.Text = "Filtrele";
-            // 
-            // CloseButton
-            // 
-            this.CloseButton.Font = new System.Drawing.Font("Microsoft YaHei UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.CloseButton.Location = new System.Drawing.Point(213, 0);
-            this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(92, 30);
-            this.CloseButton.TabIndex = 18;
-            this.CloseButton.Text = "Close";
-            this.CloseButton.UseVisualStyleBackColor = true;
-            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // panel2
             // 
@@ -294,6 +301,69 @@
             this.panel3.Size = new System.Drawing.Size(1183, 296);
             this.panel3.TabIndex = 20;
             // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::MessageApp.Properties.Resources.background;
+            this.panel4.Controls.Add(this.button3);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.textBox1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1558, 597);
+            this.panel4.TabIndex = 18;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(926, 185);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 53);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Giriş Yap";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.Location = new System.Drawing.Point(516, 148);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(5);
+            this.label6.Size = new System.Drawing.Size(152, 40);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "KullanıcıAdı";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(514, 219);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(5);
+            this.label5.Size = new System.Drawing.Size(90, 49);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Şifre";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(707, 234);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
+            this.textBox2.Size = new System.Drawing.Size(169, 22);
+            this.textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(707, 165);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(169, 23);
+            this.textBox1.TabIndex = 0;
+            // 
             // Celebi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -301,7 +371,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Ivory;
             this.BackgroundImage = global::MessageApp.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(1509, 600);
+            this.ClientSize = new System.Drawing.Size(1558, 597);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -317,6 +388,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.uspUyeHepsiBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -346,6 +419,12 @@
         private System.Windows.Forms.Button CloseButton;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

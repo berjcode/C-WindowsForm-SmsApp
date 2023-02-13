@@ -40,7 +40,7 @@ namespace MessageApp.Models
             request.AddParameter("application/json", body, ParameterType.RequestBody);
 
             IRestResponse response = client.Execute(request);
-             System.Windows.Forms.MessageBox.Show(response.Content);
+             //System.Windows.Forms.MessageBox.Show(response.Content);
             return response.Content.ToString();
            
 
