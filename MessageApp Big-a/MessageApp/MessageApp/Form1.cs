@@ -16,6 +16,7 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace MessageApp
 {
@@ -58,6 +59,9 @@ namespace MessageApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            // Set Button properties  
+           
             // set the resolution //Çözünürlük ayarı 
             #region Resolution
 
@@ -92,7 +96,7 @@ namespace MessageApp
 
 
             #region ThemaAndButtonSettings
-           
+            ThemaAndPropertiesSettings();
             #endregion
         }
 
@@ -100,13 +104,22 @@ namespace MessageApp
         #region SmsSendButton
         private void button1_Click(object sender, EventArgs e)
         {
-
-            foreach (var listBoxItem in Numaralar.Items)
-            {
-
-                apiService.apiSmsGonder($"{MessageBox.Text}", $"{listBoxItem}");
+          
+                foreach (var listBoxItem in Numaralar.Items)
+                {
+                try
+                {
+                    apiService.apiSmsGonder($"{MessageBox.Text}", $"{listBoxItem}");
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.Forms.MessageBox.Show("Bir hata oluştu: " + ex.Message);
+                }
 
             }
+
+
+
 
             //apiService.apiSmsGonder($"{MessageBox.Text}", $"{Number.Text}");
 
@@ -121,7 +134,7 @@ namespace MessageApp
 
 
 
-            SqlCommand command = new SqlCommand("select Id,Ad, Soyad,Tel1,Tel2 from Uye where Ad like '% " + textBox3.Text + "%'  or Soyad like '% " + textBox3.Text + "%' ", conn);
+            SqlCommand command = new SqlCommand("select Id,Ad, Soyad,Tel1,Tel2,DogumTarihi,Tutar,BasTarih,BitTarih,OdemeGunu from Uye where Ad like '% " + textBox3.Text + "%'  or Soyad like '% " + textBox3.Text + "%' ", conn);
 
             conn.Open();
 
@@ -200,7 +213,6 @@ namespace MessageApp
             {
                 System.Windows.Forms.MessageBox.Show("Bir hata oluştu: " + ex.Message);
             }
-
 
 
         }
@@ -376,30 +388,130 @@ namespace MessageApp
 
        
 
+        public void  ThemaAndPropertiesSettings()
+        {
+            //Button3 GirişYap
+            EnterButton.Height = 40;
+            EnterButton.Width = 200;
+            EnterButton.BackColor = Color.Beige;
+            EnterButton.Text = "Giriş Yap";
+            EnterButton.Font = new Font("Georgia", 14);
+
+
+            ////Label Kullanıcı Adı
+            Username.Height = 40;
+            Username.Width = 200;
+            Username.BackColor = Color.Beige;
+            Username.Text = "Kullanıcı Adı";
+            Username.Font = new Font("Georgia", 14);
+            ////Label Password
+            password.Height = 40;
+            password.Width = 200;
+            password.BackColor = Color.Beige;
+
+            password.Text= "Şifre        ";
+            password.Font = new Font("georgia", 14);
+
+            //// //Login textbox1 and textbox2
+
+           
+            textboxUsername.Height = 40;
+            textboxUsername.Width = 200;
+            textboxUsername.BackColor = Color.Beige;
+
+            textboxUsername.Font = new Font("Georgia", 14);
+
+            ////2
+            textboxPassword.Height = 40;
+            textboxPassword.Width = 200;
+            textboxPassword.BackColor = Color.Beige;
+
+            textboxPassword.Font = new Font("Georgia", 14);
+
+            //Search Button
+            button2.Height = 40;
+            button2.Width = 200;
+            button2.BackColor = Color.Beige;
+            button2.Text = "Ara";
+            button2.Font = new Font("Georgia", 14);
+
+            //Close Button
+           CloseButton.Height = 40;
+            CloseButton.Width = 100;
+            CloseButton.BackColor = Color.Beige;
+            CloseButton.Text = "Close";
+            CloseButton.Font = new Font("Georgia", 14);
+
+            //RemoveButton
+            RemoveBtn.Height = 40;
+            RemoveBtn.Width = 200;
+            RemoveBtn.BackColor = Color.Beige;
+            RemoveBtn.Text = "Temizle";
+            RemoveBtn.Font = new Font("Georgia", 14);
+            //AllAddButton
+            AllAddButton.Height = 40;
+            AllAddButton.Width = 200;
+            AllAddButton.BackColor = Color.Beige;
+            AllAddButton.Text = "Hepsini Ekle";
+            AllAddButton.Font = new Font("Georgia", 14);
+
+            //AddLİstButton
+
+            AddListButton.Height = 40;
+
+            AddListButton.Width = 200;
+
+            AddListButton.BackColor = Color.Beige;
+
+            AddListButton.Text = "Ekle";
+
+            AddListButton.Font = new Font("Georgia", 14);
+
+            //Send Button
+            button1.Height = 40;
+
+            button1.Width = 200;
+            button1.BackColor = Color.Beige;
+
+            button1.Text = "Gönder";
+
+            button1.Font = new Font("Georgia", 14);
+
+        }
 
         #endregion
         #region Login
-        private void button3_Click(object sender, EventArgs e)
-        {
+         
+        
 
-            SqlCommand command = new SqlCommand("select COUNT(*) from MessageAppLogin where UserName = @userName and Password = @password ",conn);
+        //async 
+        //this: o andaki form nesnesini gösterir.
+        private async  void EnterButton_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("select COUNT(*) from MessageAppLogin where UserName = @userName and Password = @password ", conn);
 
             conn.Open();
 
-            command.Parameters.AddWithValue("@userName", textBox1.Text);
-            command.Parameters.AddWithValue("@password", textBox2.Text);
+            command.Parameters.AddWithValue("@userName", textboxUsername.Text);
+            command.Parameters.AddWithValue("@password", textboxPassword.Text);
             int result = (int)command.ExecuteScalar();   // tek bir değer beklediğimizi belirttik.
-         if(result>0)
+            if (result > 0)
             {
-                if (panel4.Visible == false)
+                if (panel1.Visible == false)
                 {
+                    for (int i = 0; i <= 100; i += 10)
+                    {
+                        await Task.Delay(100);
+                        this.Opacity = i / 100.0;
+                        
+                    }
 
-                    panel4.Visible = true;
+                    panel1.Visible = true;
                 }
                 else
                 {
 
-                    panel4.Visible = false;
+                    panel1.Visible = false;
                 }
             }
             else
@@ -408,13 +520,22 @@ namespace MessageApp
             }
 
             conn.Close();
-           
         }
+
+
+        private void textboxPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                EnterButton.PerformClick();
+            }
+        }
+
 
         #endregion
 
 
-      
+
 
 
         //Form 

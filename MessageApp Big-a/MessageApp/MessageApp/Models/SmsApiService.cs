@@ -24,7 +24,8 @@ namespace MessageApp.Models
                 sender = "CELEBI SPOR",
                 phones = new string[] { numaralar }
             };
-
+         
+           
             var client = new RestSharp.RestClient("https://api.vatansms.net/api/v1/1toN");
 
            client.Timeout = -1;
@@ -40,7 +41,7 @@ namespace MessageApp.Models
             request.AddParameter("application/json", body, ParameterType.RequestBody);
 
             IRestResponse response = client.Execute(request);
-             //System.Windows.Forms.MessageBox.Show(response.Content);
+             
             return response.Content.ToString();
            
 
