@@ -1,0 +1,68 @@
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\MessageApp.exe.config
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\MessageApp.exe
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\MessageApp.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\RestSharp.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Buffers.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Memory.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Text.Json.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.ValueTuple.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\RestSharp.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Buffers.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Memory.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Text.Json.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.ValueTuple.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.Properties.Resources.resources
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.GenerateResource.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CopyComplete
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.exe
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.Celebi.resources
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\MessageApp.exe.config
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\MessageApp.exe
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\MessageApp.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\RestSharp.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Buffers.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Memory.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Text.Json.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.ValueTuple.dll
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\RestSharp.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Buffers.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Memory.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Text.Json.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\bin\Debug\System.ValueTuple.xml
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.AssemblyReference.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.Celebi.resources
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.Properties.Resources.resources
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.GenerateResource.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CoreCompileInputs.cache
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CopyComplete
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.exe
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a - Kopya\MessageApp\MessageApp\obj\Debug\MessageApp.pdb
