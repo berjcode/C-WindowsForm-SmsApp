@@ -264,7 +264,7 @@ namespace MessageApp
 
             if(selectValue == "Tümü")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum  from Uye", conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum  from Uyetbl", conn);
 
                 conn.Open();
 
@@ -281,7 +281,7 @@ namespace MessageApp
             }
             else if(selectValue == "Devam Eden veya İzinli")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uye where Durum =1 or Durum =3 ",conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uyetbl where Durum =1 or Durum =3 ",conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -302,7 +302,7 @@ namespace MessageApp
             }
             else if(selectValue == "İzinli")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uye where Durum =3 ", conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uyetbl where Durum =3 ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -313,7 +313,7 @@ namespace MessageApp
             }
             else if(selectValue == "Branş")
             {
-                SqlCommand command = new SqlCommand("select Uye.Id,Uye.Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum,Brans.Ad  from Uye  inner join Brans on Uye.BransId = Brans.Id  ", conn);
+                SqlCommand command = new SqlCommand("select Uye.Id,Uye.Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum,Brans.Ad  from Uyetbl inner join Brans on Uye.BransId = Brans.Id  ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -335,7 +335,7 @@ namespace MessageApp
             }
             else if (selectValue == "Devam Eden Borçlu")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,aidat from Uye   ", conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,aidat from Uyetbl  ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -346,7 +346,7 @@ namespace MessageApp
             }
             else if (selectValue == "Paketi Biten ve Devam Etmeyen")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uye where Durum = 0  ", conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uyetbl where Durum = 0  ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
@@ -357,7 +357,7 @@ namespace MessageApp
             }
             else if (selectValue == "Kaydı Silinen")
             {
-                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uye where Durum = 0  ", conn);
+                SqlCommand command = new SqlCommand("select Id,Ad,Soyad,Tel1,Tel2, Adres,Paket,Durum from Uyetbl where Durum = 0  ", conn);
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter(command);
 
