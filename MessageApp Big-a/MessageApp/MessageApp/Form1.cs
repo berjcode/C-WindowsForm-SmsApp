@@ -18,13 +18,23 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace MessageApp
 {
-    public partial class Form1 : Form
+    public partial class Celebi : Form
     {
+        #region Note
         //Not: Telefon Numarası Herzaman Grid'de 4.Kolona denk gelmesi gerekir.
+        //Note: The Phone Number must always correspond to the 4th Column of the Grid.
+        //Alternative solution: bring to the first column of the table or solve with a function
+        //Alternatif çözüm: tablonun ilk sütununa getirin veya bir fonksiyon Oluştur.
+
+        //Package: 
+        #endregion
+
+        //SqlConnection 
         #region SqlConnect
         SqlConnection conn = new SqlConnection("Data Source=176.236.132.247;Initial Catalog=Celebi;User Id=sa;Password=XjsqEEWdvP17pMe");
         #endregion
 
+        // Create New Objects
         #region Create Object 
         Sms sms = new Sms();
         SmsModel smsModel = new SmsModel();
@@ -39,7 +49,7 @@ namespace MessageApp
 
 
         #endregion
-        public Form1()
+        public Celebi()
         {
             InitializeComponent();
 
@@ -47,7 +57,7 @@ namespace MessageApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // set the resolution //Çözünürlük ayarı 
             #region Resolution
 
             this.Location = new Point(0, 0);
@@ -61,26 +71,28 @@ namespace MessageApp
             float ratioHeight = ((float)ClienResolution.Height / (float)nowHeight);
 
             this.Scale(new SizeF(ratioWidth, ratioHeight));
-            #endregion
+            #endregion 
 
-
+            //Uygulama açılırken combobox'ları doldurur.
             #region ComboBoxUpload
-            ComboboxDataAdd();
+            ComboboxDataAdd(); //filling comboboxes
             #endregion
 
+
+            #region AppSettings
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink; //
+            this.StartPosition = FormStartPosition.CenterScreen; //ekranın ortasına alma 
+          this.FormBorderStyle = FormBorderStyle.Sizable; //Cerceveyi Oynatma
+            this.Size = new Size(1600, 900);//Cerceve boyutu
+            this.MaximumSize = new Size(1600, 900);
+            #endregion
         }
 
-
+        //Listbox'daki tüm numaralara mesaj atar. tekil veya coğul şekilde atar.
+        #region SmsSendButton
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
-            //apiSmsGonder();
-
-
-            System.Windows.Forms.MessageBox.Show("Butona Tıklandı");
-
 
             foreach (var listBoxItem in Numaralar.Items)
             {
@@ -91,14 +103,12 @@ namespace MessageApp
 
             //apiService.apiSmsGonder($"{MessageBox.Text}", $"{Number.Text}");
 
-
-
-
         }
 
+        #endregion
 
-
-
+        // İsim ve soyada göre search işlemi yapar.
+        #region SearchTextBox
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -123,7 +133,12 @@ namespace MessageApp
 
 
         }
+        #endregion
 
+
+        //Numarayı Listbox'a Ekle, Tekli ekleme
+        //Listbox'daki tüm veriyi siler.
+        #region AddandRemoveButton
         private void AddListButton_Click(object sender, EventArgs e)
         {
             Numaralar.Items.Add(Number.Text);
@@ -134,65 +149,42 @@ namespace MessageApp
             Numaralar.Items.Clear();
         }
 
-      
+        #endregion
 
-        //private List<string> selectedValues = new List<string>();
         
+        //Checkbox true ise Listbox'a ekle eğer false ise Listbox'dan kaldır.
+        #region AddCheckBoxListbox
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-
-
-
-            //DataGridViewRow selectedRow = dataGridView1.CurrentRow;
-            //string cellValue = selectedRow.Cells[4].Value.ToString();
-
-
-
-
-
-            //var checkBox = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
-            //       DataGridViewRow selectedRow = dataGridView1.CurrentRow;
-            //   string cellValue = selectedRow.Cells[4].Value.ToString();
-            //   Numaralar.Items.Add(cellValue);
-
-
-            //var checkBox = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
-            //try
-            //{
-            //    DataGridViewRow selectedRow = dataGridView1.CurrentRow;
-            //if (selectedRow.Cells[4].Value != null)
-            //{
-            //    string cellValue = selectedRow.Cells[4].Value.ToString();
-            //    Numaralar.Items.Add(cellValue);
-
-
-            //}
-            //}
-            //catch (Exception ex)
-            //{
-            //     System.Windows.Forms.MessageBox.Show("Bir hata oluştu: " + ex.Message);
-            //}
 
             var checkBox = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewCheckBoxCell;
             try
             {
+              
                 DataGridViewRow selectedRow = dataGridView1.CurrentRow;
                 if (selectedRow.Cells[4].Value != null)
                 {
                     string cellValue = selectedRow.Cells[4].Value.ToString();
                     //Numaralar.Items.Add(cellValue);
                     int index = Numaralar.Items.IndexOf(cellValue);
-                    if (index != -1)
+                   if(checkBox != null)//Checkbox kolonundan  bir değer gelip gelmediğini kontrol ediyoruz.
                     {
-                        Numaralar.Items.RemoveAt(index);
-                        checkBox.Value = true;
+                        if (index != -1)
+                        {
 
-                    }
-                    else
+                            Numaralar.Items.RemoveAt(index);
+                            checkBox.Value = true;
+
+                        }
+                        else
+                        {
+
+                            Numaralar.Items.Add(cellValue);
+                            checkBox.Value = false;
+                        }
+                    }else
                     {
-                        Numaralar.Items.Add(cellValue);
-                        checkBox.Value = false;
+                        System.Windows.Forms.MessageBox.Show("Lütfen CheckBox üzerinden işlem yapın. ");
                     }
                 }
             }
@@ -204,8 +196,12 @@ namespace MessageApp
 
 
         }
+        #endregion
 
-            private void AllAddButton_Click(object sender, EventArgs e)
+
+        //Grid'deki her satırı ListBox'a ekle.
+        #region AllGridAddListBox 
+        private void AllAddButton_Click(object sender, EventArgs e)
             {
                 List<string> cellValues = new List<string>();
                 foreach (DataGridViewRow row in dataGridView1.Rows)
@@ -225,9 +221,12 @@ namespace MessageApp
 
 
             }
+        #endregion
 
-       
 
+        //Combobox'ları doldur.
+        //Combobox filtreleme işlemleri. 
+        #region Combobox
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectValue = comboBox1.SelectedItem.ToString();
@@ -337,7 +336,7 @@ namespace MessageApp
                 conn.Close();
             }
         }
-
+       
 
         private void ComboboxDataAdd()
         {
@@ -351,6 +350,26 @@ namespace MessageApp
             comboBox1.Items.Add("Paketi Biten ve Devam Etmeyen");
             comboBox1.Items.Add("Kaydı Silinen");
         }
+        #endregion
+
+
+        #region App Settings
+        //Close Button
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = System.Windows.Forms.MessageBox.Show("Uygulamayı kapatmak istediğinizden Emin misiniz?","Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if(result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+           
+        }
+
+        #endregion
+
+        //Form 
+        
     }
-    }
+}
 

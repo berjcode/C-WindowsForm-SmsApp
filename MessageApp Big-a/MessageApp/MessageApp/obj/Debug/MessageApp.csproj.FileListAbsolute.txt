@@ -25,10 +25,10 @@ C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\De
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\bin\Debug\System.ValueTuple.xml
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.AssemblyReference.cache
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.SuggestedBindingRedirects.cache
-C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.Form1.resources
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.Properties.Resources.resources
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.GenerateResource.cache
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CoreCompileInputs.cache
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.csproj.CopyComplete
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.exe
 C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.pdb
+C:\Users\abdbl\OneDrive\Masaüstü\MessageApp Big-a\MessageApp\MessageApp\obj\Debug\MessageApp.Celebi.resources
